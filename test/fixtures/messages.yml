@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  body: MyText
+  next_send_time: 2012-11-15 14:03:23
+  last_send_time: 2012-11-15 14:03:23
+
+two:
+  body: MyText
+  next_send_time: 2012-11-15 14:03:23
+  last_send_time: 2012-11-15 14:03:23

@@ -1,0 +1,12 @@
+User
+  - has_many :messages
+  - name
+  - number
+[X] Message
+  - has_many :recipient
+  - body
+  - next_send_time
+  - last_send_time
+[X] MessageRecipient
+  - user_id
+  - message_id
