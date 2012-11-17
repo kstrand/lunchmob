@@ -1,9 +1,9 @@
 # Notes
  * Goal no one eats alone
- * users = user attributes ( new in town, no friends, hungry ) 
+ * Users = new in town, no friends, hungry
 
 # Future features 
-	* first responder become group leader gets the list 
+  * First responder become group leader? gets the list 
 
 # Flow
 
