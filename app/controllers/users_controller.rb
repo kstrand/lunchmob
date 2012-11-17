@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     # @user = User.new(params[:user])
     # (to, body)
     
-    User.sms_user(params[:user][:number],"www.redit.com")
+    #User.send_sms(params[:user][:number],"www.redit.com")
 
     @user = User.new(params[:user])
 
