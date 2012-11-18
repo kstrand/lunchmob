@@ -1,9 +1,6 @@
 # Notes
- * Goal no one eats alone
- * Users = new in town, no friends, hungry
-
-# Future features 
-  * First responder become group leader? gets the list 
+ * Goal: No one eats alone
+ * Users: New in town, no friends, hungry
 
 # Flow
 
@@ -65,3 +62,6 @@
   - thumbs up / down 
 
 (until tomorrow )
+
+# Future features 
+  * First responder become group leader? gets the list 
