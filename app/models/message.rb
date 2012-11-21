@@ -1,3 +1,5 @@
+require 'twilio-ruby'
+
 class Message < ActiveRecord::Base
   attr_accessible :body, :last_send_time, :next_send_time
 

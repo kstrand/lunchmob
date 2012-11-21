@@ -82,6 +82,7 @@ GEM
       activesupport (= 3.2.8)
       bundler (~> 1.0)
       railties (= 3.2.8)
+    rails-admin (0.0.0)
     railties (3.2.8)
       actionpack (= 3.2.8)
       activesupport (= 3.2.8)
@@ -131,6 +132,7 @@ DEPENDENCIES
   compass-rails
   jquery-rails
   rails (= 3.2.8)
+  rails-admin
   sass-rails (~> 3.2.3)
   sqlite3
   twilio-ruby

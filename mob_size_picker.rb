@@ -24,7 +24,7 @@ def todays_mob_sizes(num_users)
 
       #once ideal mob size is found, create todays_mobs array.
       for i in 1..num_mobs
-        puts "todays_mob_sizes: #{todays_mob_sizes}"
+        #puts "todays_mob_sizes: #{todays_mob_sizes}"
         todays_mob_sizes << mob_size
       end
       todays_mob_sizes[-1] = todays_mob_sizes[-1] + stragglers
@@ -33,5 +33,12 @@ def todays_mob_sizes(num_users)
   end
 end
 
-m = todays_mob_sizes(14) # this would be number of users in user table
-p m
+# m = todays_mob_sizes(19) # this would be number of users in user table
+# p m
+
+for i in 1..7
+  students = (0..50).to_a
+  users = students.sample
+  puts "this was number of students #{users}"
+ p todays_mob_sizes(users)
+end 
