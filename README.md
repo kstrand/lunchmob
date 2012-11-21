@@ -16,6 +16,9 @@
   - Intructions text (next lunch will be at 12:45)
   - Share-link
 
+
+(time passes until 12:44)
+
 2.5 Create today's mobs
   - for each @mob 
     TODO define algorithm
@@ -25,9 +28,9 @@
     - Mob members
     - Meetup point(one of five locations)
 
-(time passes until 12:45)
+(at 12:45)
 
-3. send invite sms 
+3. send invite sms to mobs
   - link to mobil lunch plan (random invite text)
 
 4. send invite email 

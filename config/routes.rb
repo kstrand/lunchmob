@@ -1,8 +1,10 @@
 Fuckthatshit::Application.routes.draw do
+  resources :mobs
   resources :users
 
-  resources :shits
   root to: 'users#index'
+  
+  #post '/mobs(.:format)'  => 'mobs#create' :as => :mobs_create
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
