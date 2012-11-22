@@ -36,14 +36,8 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    # @user = User.new(params[:user])
-    # (to, body)
-    #User.send_sms(params[:user][:number],"www.redit.com")
 
     @user = User.new(params[:user])
-
-
-    #@user.mob_id = random_mob
 
     respond_to do |format|
       if @user.save
@@ -71,21 +65,6 @@ class UsersController < ApplicationController
       end
     end
   end
-
-  def random_mob
-    
-    # while true
-    #   mob = rand(1..10)
-    #   if Mob.find(mob).length <= 6
-    #     return mob
-    #   end
-    # \\
-    @mon
-
-
-  end
-
-
 
   # DELETE /users/1
   # DELETE /users/1.json
