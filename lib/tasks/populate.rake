@@ -4,7 +4,7 @@ namespace :db do
     if Rails.env.production?
       raise "This task should not be used in production"
     end
-
+    Mob.delete_all 
     User.delete_all
     User.create([
       {:name => "Mahoney", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},

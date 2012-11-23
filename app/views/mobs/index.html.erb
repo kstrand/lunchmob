@@ -1,15 +1,12 @@
-<h1>All Mobs</h1>
+<h1>Daily Mobs</h1>
 
 	<% @mobs.each do |mob|%>
-	<table class="table">
-		<% mob.users.each do |mob_member| %>
-
-		<tr><td><%= mob_member.name %> </td></tr>
+	<table class="table_1" >  
+			<% mob.users.each do |mob_member| %>  
+			<tr><td> <%= mob_member.name %> </td></tr>
+		<% end %>
+		</table> 
 	<% end %>
-
-  <% end %>
-
-  </table>
 
 
 <%= link_to 'Back', users_path %>
