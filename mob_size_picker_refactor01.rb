@@ -18,8 +18,8 @@
           todays_mob_sizes << mob_size
         end
         if todays_mob_sizes[-1] + stragglers > todays_mob_sizes[-1]
-         tempe = todays_mob_sizes[-1] + stragglers
-           quotient, remainder = tempe.divmod(2)
+         group_to_big  = todays_mob_sizes[-1] + stragglers
+           quotient, remainder = group_to_big.divmod(2)
             todays_mob_sizes << (quotient + remainder)
             todays_mob_sizes << quotient
         end
