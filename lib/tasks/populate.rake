@@ -9,7 +9,7 @@ namespace :db do
     User.create([
       {:name => "Mahoney", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},
       {:name => "Kyle", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},
-      {:name => "Just you wait", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},
+      {:name => "Olga", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},
       {:name => "Bill Defoe", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},
       {:name => "Ice Cube", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},
       {:name => "Suzie", :phone_number => "917-545-5771", :email => "dek1dek@gmail.com"},
