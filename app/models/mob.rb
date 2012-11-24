@@ -13,16 +13,4 @@ class Mob < ActiveRecord::Base
   def self.deactivate_all
     active.update_all(:active => false)
   end
-
-  # def all_mob_messages
-  #   mobs = Mob.all  
-  # end
-
-
-  # def message_users(message_text)
-  #   msg = Message.create(body: message_text)
-  #   msg.send_sms(self.all_numbers)
-  # end
-
-
 end

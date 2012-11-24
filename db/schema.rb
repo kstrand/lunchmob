@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121124000813) do
+ActiveRecord::Schema.define(:version => 20121124223609) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.string   "icon_url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "message_recipients", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -34,6 +41,19 @@ ActiveRecord::Schema.define(:version => 20121124000813) do
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.boolean  "active",     :default => true
+  end
+
+  create_table "restaurants", :force => true do |t|
+    t.string   "name"
+    t.integer  "category_id"
+    t.string   "street_1"
+    t.string   "street_2"
+    t.string   "city",                      :default => "San Francisco"
+    t.string   "state",        :limit => 2, :default => "CA"
+    t.string   "zip"
+    t.string   "phone_number"
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
   end
 
   create_table "users", :force => true do |t|

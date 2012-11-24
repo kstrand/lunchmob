@@ -1,10 +1,14 @@
 Fuckthatshit::Application.routes.draw do
   
+ 
+
+  match "/mobs/:mob_id" => "mobs#show"
+  
+  match "/mobs/:mob_id(/users/:user_id)" => "mobs#show"
+
   resources :mobs
   
   resources :users
-  
-  match "/mobs/:mob_id(/users/:user_id)" => "mobs#show"
 
   root to: 'users#new'
   
