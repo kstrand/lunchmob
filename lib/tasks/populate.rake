@@ -21,6 +21,6 @@ namespace :db do
       {:name => "Sam",        :phone_number => "917-545-5771", :email => "dek1dek+27@gmail.com"},
       {:name => "Bob",        :phone_number => "917-545-5771", :email => "dek1dek+24@gmail.com"},
       {:name => "Dan",        :phone_number => "917-545-5771", :email => "dek1dek+27@gmail.com"},
-    ])+1
-  end+1
+    ])
+  end
 end
