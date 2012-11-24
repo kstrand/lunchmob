@@ -1,8 +1,15 @@
 <h1>Daily Mobs</h1>
-		<% @mobs.each_with_index do |mob, index| %>
-				
-			<table class="table" align='center'>  
+<%= link_to 'Back', users_path %>
+<br>
+<br>
+<br>
+  <div class="mob_tables">
+
+		<% @mobs.each_with_index do |mob, index| %>	
+			<table class="table_<%=index + 1%>" align='center'>  
+
 				<th><%= link_to("Mob #{index+1}", mob) %></th>
+
 				<% mob.users.each do |mob_member| %>  
 
 					<tr>
@@ -14,8 +21,8 @@
 			</table> 
 
 	<% end %>
-
-	<%= link_to 'Back', users_path %>
+</div>
+	
 	
 
 

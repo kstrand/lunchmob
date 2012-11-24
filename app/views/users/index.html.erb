@@ -2,15 +2,16 @@
 
 <table>
   <tr>
-    <th>header 1</th>
-    <th>header 2</th>
-    <th>header 3</th>
+    <th>name</th>
+    <th>number</th>
+    <th>email</th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
     <td><%= user.name %></td>
     <td><%= user.phone_number %></td>
+    <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>

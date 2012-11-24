@@ -243,7 +243,26 @@ $custSelectBgColor: #fff;
 // https://github.com/scottkellum/modular-scale by scottkellum
 @import 'foundation';
 
+.mob_tables {
+	border: 1px solid blue;
+	width: 29.6em;
+	margin: auto;
+}
 
+.mob_tables .table_1 {
+  float: left;
+  border: 1px solid blue;
+  margin-left: 8%;
+}
 
+.mob_tables .table_2 {
+	float: left;
+  border: 1px solid blue;
+  margin-left: 8%;
+}
 
-
+.mob_tables .table_3 {
+	float: left;
+  border: 1px solid blue;
+  margin-left: 8%;
+}

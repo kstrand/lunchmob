@@ -1,2 +1,16 @@
 <h1>Mobs#show</h1>
 <p>Find me in app/views/mobs/show.html.erb</p>
+		
+			<table class="table" align='center'>  
+		
+				<% @mob.users.each do | mob_member | %>  
+
+					<tr>
+						<td><%= mob_member.name %></td>
+					</tr>
+				
+				<% end %>
+
+			</table> 
+
+	<%= link_to 'Back', users_path %>

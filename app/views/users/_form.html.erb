@@ -4,7 +4,8 @@
 <center>
 <table border="1" id='sign_in'>
 <tr>
-  <h1>Lunch Mob</h1>
+  <h1>Lunch Mob </h1>
+  <h2>No one eats alone.</h2>
 <td><%= form_for(@user) do |f| %>
 <table>
   <% if @user.errors.any? %>
@@ -31,6 +32,12 @@
     <%= f.text_field :phone_number %>
   </div>
 
+   <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+
+
 
   </div>
   <div class="actions">
@@ -38,7 +45,7 @@
   </div>
   </table>
 <% end %>
-<%= link_to 'Back', users_path %>
+<%= link_to 'List of Users', users_path %>
 
 </center>
 

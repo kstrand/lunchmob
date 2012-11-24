@@ -22,9 +22,9 @@ class Message < ActiveRecord::Base
 
 def send_daily_mob
   @mobs = Mob.all
-    
+ 
   @mobs.each do |mob|
-    message = Message.create(:body => "#{mob.message}")
+    message = Message.create(:body => "Click on this link www.lunchmob.com/mobs/#{mob.id} ")
     message.send_sms(mob.all_numbers)
   end
 end

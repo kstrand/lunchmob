@@ -2,7 +2,7 @@ Fuckthatshit::Application.routes.draw do
   resources :mobs
   resources :users
 
-  root to: 'users#index'
+  root to: 'users#new'
   
   #post '/mobs(.:format)'  => 'mobs#create' :as => :mobs_create
 
