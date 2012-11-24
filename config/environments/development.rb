@@ -34,4 +34,6 @@ Fuckthatshit::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  BASE_URL = "http://localhost:3000"
 end

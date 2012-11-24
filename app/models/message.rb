@@ -20,25 +20,13 @@ class Message < ActiveRecord::Base
     end
   end
 
-def send_daily_mob
-  @mobs = Mob.all
- 
-  @mobs.each do |mob|
-    message = Message.create(:body => "Click on this link www.lunchmob.com/mobs/#{mob.id} ")
-    message.send_sms(mob.all_numbers)
+  def send_daily_mob
+    @mobs = Mob.all
+    @mobs.each do |mob|
+      mob.users.each do |user|
+        message = Message.create(:body => "Click on this link #{BASE_URL}/mobs/#{mob.id}/users/#{user.id}")
+        message.send_sms([user.phone_number])
+      end
+    end
   end
 end
-
-
-end
-
-# message = Message.create(:body => "let's do lunch")
-# message.send_sms(users)
-
-# mob = Mob.first
-# iterate over mob to set the message body
-
-# message = Message.create(:body => "#{mob.message}")
-# message.send_sms(mob.all_numbers)
-
-# make a new message somewhere 

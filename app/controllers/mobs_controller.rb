@@ -44,7 +44,8 @@ class MobsController < ApplicationController
 
   def show
     @mobs = Mob.all
-    @mob = Mob.find(params[:id])
+    @mob = Mob.find(params[:mob_id])
+    p "Hey there user #{params[:user_id]}"
   end
 
 
