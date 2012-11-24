@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121234319) do
+ActiveRecord::Schema.define(:version => 20121124000813) do
 
   create_table "message_recipients", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -31,8 +31,9 @@ ActiveRecord::Schema.define(:version => 20121121234319) do
   create_table "mobs", :force => true do |t|
     t.string   "name"
     t.text     "message"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.boolean  "active",     :default => true
   end
 
   create_table "users", :force => true do |t|

@@ -36,9 +36,6 @@ end
 # m = todays_mob_sizes(19) # this would be number of users in user table
 # p m
 
-for i in 1..7
-  students = (0..50).to_a
-  users = students.sample
-  puts "this was number of students #{users}"
- p todays_mob_sizes(users)
+50.times do |i|
+  p "#{i+1} -> #{todays_mob_sizes(i+1)}"
 end 
