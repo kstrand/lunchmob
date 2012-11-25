@@ -1,4 +1,4 @@
-require 'Mobify.rb'
+require '/lib/mobify.rb'
 
 class MobsController < ApplicationController
 
