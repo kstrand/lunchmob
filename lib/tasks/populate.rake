@@ -1,9 +1,6 @@
 namespace :db do
   desc "Erase and fill database"
   task :populate => :environment do
-    if Rails.env.production?
-      raise "This task should not be used in production"
-    end
 
     # TODO drop tables instead of deleting all.
     Mob.delete_all
