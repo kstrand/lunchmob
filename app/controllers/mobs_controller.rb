@@ -1,5 +1,3 @@
-require '/lib/mobify.rb'
-
 class MobsController < ApplicationController
 
   def index
@@ -8,7 +6,7 @@ class MobsController < ApplicationController
 
   def create
     Mob.deactivate_all
-    empty_mobs = Mobify.todays_mob_sizes(User.count)
+    empty_mobs = Mob.todays_mob_sizes(User.count)
     users = User.all.shuffle
     restaurants = Restaurant.all.shuffle
     locations = MeetUpLocation.all.shuffle
