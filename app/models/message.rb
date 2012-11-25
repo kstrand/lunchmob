@@ -29,4 +29,6 @@ class Message < ActiveRecord::Base
       end
     end
   end
+
+  
 end
