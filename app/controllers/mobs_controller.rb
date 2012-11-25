@@ -8,17 +8,34 @@ class MobsController < ApplicationController
 
   def create
     Mob.deactivate_all
-    mob_sizes = Mobify.todays_mob_sizes(User.count)
-
+    empty_mobs = Mobify.todays_mob_sizes(User.count)
     users = User.all.shuffle
-    mob_sizes.each do |size|
+    restaurants = Restaurant.all.shuffle
+    locations = MeetUpLocation.all.shuffle
+
+    empty_mobs.each_with_index do |size, i |
       mob = Mob.create(name: "mob of #{size}", message: 'Think about code not lunch!')
-      mob.users << users.pop(size) # this line sets the users for a mob 
+
+      mob.meet_up_location = locations[i] # FIXME : check if there as many locations as mobs.
+      mob.restaurant = restaurants[i]
+
+      # note: next line also saves the mob object
+      mob.users << users.pop(size) # this line sets the users for a mob
+      mob.save!
     end
 
     message = Message.new(:body => "LunchMob rules") 
     message.send_daily_mob
     redirect_to mobs_path
+  end
+
+  def show
+    @mob = Mob.find(params[:mob_id])
+    @restaurant = Mob.find(params[:mob_id]).restaurant
+   #TODO: record in the user object that the user is active because they clicked params[:user_id]
+  end
+
+  def destroy
   end
 
   def update
@@ -27,10 +44,7 @@ class MobsController < ApplicationController
   def edit
   end
 
-  def show
-    @mob = Mob.find(params[:mob_id])
-    p "#{params[:mob_id]}"
-    p "Hey there user #{params[:user_id]}"
+  def new
   end
 
 

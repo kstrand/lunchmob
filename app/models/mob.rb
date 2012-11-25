@@ -1,6 +1,9 @@
 class Mob < ActiveRecord::Base
-  attr_accessible :message, :name
+  attr_accessible :message, :name, :restaurant_id, :meet_up_location_id
 	has_many :users
+
+  belongs_to :restaurant
+  belongs_to :meet_up_location
 
   scope :active, where(:active => true)
 

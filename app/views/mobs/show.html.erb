@@ -1,18 +1,29 @@
-<h1>Your Mob</h1>
-<p>here's where you're going to lunch</p>
-<p>and who you're going with.</p>
-		
-			<table class="table" align='center'>  
-		
-				<% @mob.users.each do | mob_member | %>  
+<div class="mob">
+	<h1>Lunch Mob</h1>
+	<h3><q>No one eats alone...</q></h3>
 
-					<tr>
-						<td><%= mob_member.name %></td>
-						<td><%= mob_member.phone_number%></td>
-					</tr>
-				
-				<% end %>
+	<div class="category">
+		<img class="icon" src="<%= @restaurant.category.icon_url %>" /> 
+	</div>
+	You'll be eating <b><%= @restaurant.category.name %></b> today!
+	   
+	<h2><%= @mob.restaurant.name %> at <%= @mob.restaurant.street_1 %></h2> 
 
-			</table> 
+	<p> Your LunchMob is waiting near the <b><%= @mob.meet_up_location.name %></b>... hurry up!</td>
+
+
+				<table class="table" align='center'>  
+			
+					<% @mob.users.each do | mob_member | %>  
+
+						<tr>
+							<td><%= mob_member.name %></td>
+							<td><%= mob_member.phone_number%></td>
+						</tr>
+
+					<% end %>
+				</table> 
 
 	<%= link_to 'Back', users_path %>
+
+</div>

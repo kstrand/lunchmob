@@ -4,6 +4,8 @@ namespace :db do
     if Rails.env.production?
       raise "This task should not be used in production"
     end
+
+    # TODO drop tables instead of deleting all.
     Mob.delete_all
 
     User.delete_all
@@ -26,19 +28,48 @@ namespace :db do
 
     Category.delete_all
     Category.create([
-      {:id => 1, :name => "Chinese",  :icon_url => "/images/icons/chinese.png" },
-      {:id => 2, :name => "Mexican",  :icon_url => "/images/icons/mexican.png" },
-      {:id => 3, :name => "THai",     :icon_url => "/images/icons/thai.png"    },
+      {:name => "Chinese",  :icon_url => "/images/icons/chinese.png" },
+      {:name => "Mexican",  :icon_url => "/images/icons/mexican.png" },
+      {:name => "Thai",     :icon_url => "/images/icons/thai.png"    },
     ])
 
     Restaurant.delete_all
     Restaurant.create([
-      {:category_id => 1 , :name => "Pescilla",           :street_1 => "359 Kearny"          },
-      {:category_id => 2 , :name => "Wong Pan",           :street_1 => "359 Pine"            },
-      {:category_id => 1 , :name => "Chipotle",           :street_1 => "211 Sutter St."      },
-      {:category_id => 3 , :name => "Thai Thai",          :street_1 =>  "653 Clay St."       },
-      {:category_id => 2 , :name => "New Golden Daisy",   :street_1 =>  "1041 Stockton St."  },
+      {:name => "Pescilla",         :street_1 => "359 Kearny"          },
+      {:name => "Wong Pan",         :street_1 => "359 Pine"            },
+      {:name => "Chipotle",         :street_1 => "211 Sutter St."      },
+      {:name => "Thai Thai",        :street_1 =>  "653 Clay St."       },
+      {:name => "New Golden Daisy", :street_1 =>  "1041 Stockton St."  },
     ])
- end
+
+    MeetUpLocation.delete_all
+    MeetUpLocation.create([
+      {:name => "Blue lockers" },
+      {:name => "Kitchen"      },
+      {:name => "Sofas"        },
+      {:name => "Main stage"   },
+    ])  
+
+    r = Restaurant.find_by_name( "Pescilla" )
+    r.category = Category.find_by_name( "Mexican")
+    r.save!
+
+    r = Restaurant.find_by_name( "Wong Pan" )
+    r.category = Category.find_by_name( "Chinese")
+    r.save!
+
+    r = Restaurant.find_by_name( "Chipotle" )
+    r.category = Category.find_by_name( "Mexican")
+    r.save!
+
+    r = Restaurant.find_by_name( "Thai Thai" )
+    r.category = Category.find_by_name( "Thai"   )
+    r.save!
+
+    r = Restaurant.find_by_name( "New Golden Daisy" )
+    r.category = Category.find_by_name( "Chinese")
+    r.save!
+
+   end
 end
   
