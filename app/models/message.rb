@@ -11,13 +11,13 @@ class Message < ActiveRecord::Base
   def send_sms(numbers)
     client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
 
-    numbers.each do |number|
+   # numbers.each do |number|
       @msg = client.account.sms.messages.create(
         :from => FROM_NUMBER,
-        :to => number,
+        :to => numbers,
         :body => self.body
       )
-    end
+    #end
   end
 
   def send_daily_mob
