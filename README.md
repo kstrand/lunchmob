@@ -68,3 +68,4 @@
 
 # Future features 
   * First responder become group leader? gets the list 
+  * check Rails.env.development? if true send one message.
