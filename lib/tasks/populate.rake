@@ -3,9 +3,9 @@ namespace :db do
   task :populate => :environment do
 
     # TODO drop tables instead of deleting all.
-    Mob.delete_all
+    # Mob.delete_all
 
-    User.delete_all
+    # User.delete_all
     User.create([
       {:name => "Mahoney",    :phone_number => "917-545-5771", :email => "dek1dek+12@gmail.com"},
       {:name => "Kyle",       :phone_number => "917-545-5771", :email => "dek1dek+13@gmail.com"},
@@ -23,14 +23,14 @@ namespace :db do
       {:name => "Dan",        :phone_number => "917-545-5771", :email => "dek1dek+27@gmail.com"},
     ])
 
-    Category.delete_all
+    # Category.delete_all
     Category.create([
       {:name => "Chinese",  :icon_url => "/images/icons/chinese.png" },
       {:name => "Mexican",  :icon_url => "/images/icons/mexican.png" },
       {:name => "Thai",     :icon_url => "/images/icons/thai.png"    },
     ])
 
-    Restaurant.delete_all
+    # Restaurant.delete_all
     Restaurant.create([
       {:name => "Pescilla",         :street_1 => "359 Kearny"          },
       {:name => "Wong Pan",         :street_1 => "359 Pine"            },
@@ -39,7 +39,7 @@ namespace :db do
       {:name => "New Golden Daisy", :street_1 =>  "1041 Stockton St."  },
     ])
 
-    MeetUpLocation.delete_all
+    # MeetUpLocation.delete_all
     MeetUpLocation.create([
       {:name => "Blue lockers" },
       {:name => "Kitchen"      },
