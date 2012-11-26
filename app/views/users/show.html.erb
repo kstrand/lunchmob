@@ -1,15 +1,19 @@
 <p id="notice"><%= notice %></p>
+<table class="table">
+<div>
+<b>Name:</b> <%= @user.name %><br>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<b>Number:</b> <%= @user.phone_number %>
+</div>
+<h2> Thanks for signing up.</h2>
+<div>
+    <h3>You'll get a text at 12:30pm.</h3>
+    <h3>Find your mob.        </h3>
+    <h3>Go to lunch.</b>      </h3>
 
-<p>
-  <b>Number:</b>
-  <%= @user.phone_number %>
-</p>
+</div>
+</table>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user) %>
+

@@ -7,20 +7,20 @@ namespace :db do
 
     User.delete_all
     User.create([
-      {:name => "Mahoney",    :phone_number => "917-545-5771", :email => "dek1dek+12@gmail.com"},
-      {:name => "Kyle",       :phone_number => "917-545-5771", :email => "dek1dek+13@gmail.com"},
-      {:name => "Olga",       :phone_number => "917-545-5771", :email => "dek1dek+14@gmail.com"},
-      {:name => "Bill Defoe", :phone_number => "917-545-5771", :email => "dek1dek+15@gmail.com"},
-      {:name => "Ice Cube",   :phone_number => "917-545-5771", :email => "dek1dek+16@gmail.com"},
-      {:name => "Suzie",      :phone_number => "917-545-5771", :email => "dek1dek+17@gmail.com"},
-      {:name => "Janet",      :phone_number => "917-545-5771", :email => "dek1dek+18@gmail.com"},
-      {:name => "Keri",       :phone_number => "917-545-5771", :email => "dek1dek+19@gmail.com"},
-      {:name => "Kelly",      :phone_number => "917-545-5771", :email => "dek1dek+11@gmail.com"},
-      {:name => "Nigle",      :phone_number => "917-545-5771", :email => "dek1dek+29@gmail.com"},
-      {:name => "Jackson",    :phone_number => "917-545-5771", :email => "dek1dek+28@gmail.com"},
-      {:name => "Sam",        :phone_number => "917-545-5771", :email => "dek1dek+27@gmail.com"},
-      {:name => "Bob",        :phone_number => "917-545-5771", :email => "dek1dek+24@gmail.com"},
-      {:name => "Dan",        :phone_number => "917-545-5771", :email => "dek1dek+27@gmail.com"},
+      {:name => "Keith",        :phone_number => "917-545-5771", :email => "dek1dek+12@gmail.com"},
+      # {:name => "Kyle",       :phone_number => "917-545-5771", :email => "dek1dek+13@gmail.com"},
+      # {:name => "Olga",       :phone_number => "917-545-5771", :email => "dek1dek+14@gmail.com"},
+      # {:name => "Bill Defoe", :phone_number => "917-545-5771", :email => "dek1dek+15@gmail.com"},
+      # {:name => "Ice Cube",   :phone_number => "917-545-5771", :email => "dek1dek+16@gmail.com"},
+      # {:name => "Suzie",      :phone_number => "917-545-5771", :email => "dek1dek+17@gmail.com"},
+      # {:name => "Janet",      :phone_number => "917-545-5771", :email => "dek1dek+18@gmail.com"},
+      # {:name => "Keri",       :phone_number => "917-545-5771", :email => "dek1dek+19@gmail.com"},
+      # {:name => "Kelly",      :phone_number => "917-545-5771", :email => "dek1dek+11@gmail.com"},
+      # {:name => "Nigle",      :phone_number => "917-545-5771", :email => "dek1dek+29@gmail.com"},
+      # {:name => "Jackson",    :phone_number => "917-545-5771", :email => "dek1dek+28@gmail.com"},
+      # {:name => "Sam",        :phone_number => "917-545-5771", :email => "dek1dek+27@gmail.com"},
+      # {:name => "Bob",        :phone_number => "917-545-5771", :email => "dek1dek+24@gmail.com"},
+      # {:name => "Dan",        :phone_number => "917-545-5771", :email => "dek1dek+27@gmail.com"},
     ])
 
     Category.delete_all
@@ -32,11 +32,14 @@ namespace :db do
 
     Restaurant.delete_all
     Restaurant.create([
-      {:name => "Pescilla",         :street_1 => "359 Kearny"          },
-      {:name => "Wong Pan",         :street_1 => "359 Pine"            },
-      {:name => "Chipotle",         :street_1 => "211 Sutter St."      },
-      {:name => "Thai Thai",        :street_1 =>  "653 Clay St."       },
-      {:name => "New Golden Daisy", :street_1 =>  "1041 Stockton St."  },
+      {:name => "Pescilla",              :street_1 =>  "359 Kearny"          },
+      {:name => "Wong Pan",              :street_1 =>  "359 Pine"            },
+      {:name => "Chipotle",              :street_1 =>  "211 Sutter St."      },
+      {:name => "Thai Thai",             :street_1 =>  "653 Clay St."        },
+      {:name => "New Golden Daisy",      :street_1 =>  "1041 Stockton St."   },
+      {:name => "Good Mong Kok Bakery",  :street_1 =>  "1039 Stockton St."   },
+      {:name => "Bangkok Best",          :street_1 =>  "301 Kearny St"       },
+
     ])
 
     MeetUpLocation.delete_all
@@ -63,7 +66,15 @@ namespace :db do
     r.category = Category.find_by_name( "Thai"   )
     r.save!
 
+    r = Restaurant.find_by_name( "Bangkok Best" )
+    r.category = Category.find_by_name( "Thai"   )
+    r.save!
+
     r = Restaurant.find_by_name( "New Golden Daisy" )
+    r.category = Category.find_by_name( "Chinese")
+    r.save!
+
+    r = Restaurant.find_by_name( "Good Mong Kok Bakery" )
     r.category = Category.find_by_name( "Chinese")
     r.save!
 
