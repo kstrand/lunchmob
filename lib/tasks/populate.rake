@@ -25,9 +25,9 @@ namespace :db do
 
     Category.delete_all
     Category.create([
-      {:name => "Chinese",  :icon_url => "/images/icons/chinese.png" },
-      {:name => "Mexican",  :icon_url => "/images/icons/mexican.png" },
-      {:name => "Thai",     :icon_url => "/images/icons/thai.png"    },
+      {:name => "Chinese",  :icon_url => "icons/chinese.png" },
+      {:name => "Mexican",  :icon_url => "icons/mexican.png" },
+      {:name => "Thai",     :icon_url => "icons/thai.png"    },
     ])
 
     Restaurant.delete_all
@@ -80,4 +80,4 @@ namespace :db do
 
    end
 end
-  
+
