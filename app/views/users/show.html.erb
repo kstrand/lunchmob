@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
-<table class="table">
-<div>
-<b>Name:</b> <%= @user.name %><br>
 
+<div align="left" style="width:200px;border:1px solid blue;">
+
+
+
+
+<b>Name:</b> <%= @user.name %><br>
 <b>Number:</b> <%= @user.phone_number %>
-</div>
+
 <h2> Thanks for signing up.</h2>
-<div>
+
     <h3>You'll get a text at 12:30pm.</h3>
     <h3>Find your mob.        </h3>
     <h3>Go to lunch.</b>      </h3>
 
-</div>
-</table>
+
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %>
+
+</div>
 
