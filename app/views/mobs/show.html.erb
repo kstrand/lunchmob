@@ -3,7 +3,7 @@
 	<h3><q>No one eats alone...</q></h3>
 
 	<div class="category">
-		<img class="icon" src="<%= @restaurant.category.icon_url %>" /> 
+		<%= image_tag(@icon, :class => "icon") %>
 	</div>
 	You'll be eating <b><%= @restaurant.category.name %></b> today!
 	   
