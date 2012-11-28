@@ -30,6 +30,7 @@ class MobsController < ApplicationController
   def show
     @mob = Mob.find(params[:mob_id])
     @restaurant = Mob.find(params[:mob_id]).restaurant
+    @icon = @restaurant.category.icon_url.gsub( "/images/", "" )
    #TODO: record in the user object that the user is active because they clicked params[:user_id]
   end
 
