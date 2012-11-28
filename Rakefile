@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Fuckthatshit::Application.load_tasks
+Lunchmob::Application.load_tasks
