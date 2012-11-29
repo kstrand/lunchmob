@@ -25,7 +25,14 @@ class Message < ActiveRecord::Base
     @mobs.each do |mob|
       mob.users.each do |user|
         message = Message.create(:body => "Click on this link #{BASE_URL}/mobs/#{mob.id}/users/#{user.id}")
-        message.send_sms([user.phone_number])
+       begin
+          message.send_sms([user.phone_number])
+        rescue Twilio::REST::RequestError => ex
+          puts "invalid number #{user.phone_number}, moving on..."
+          next
+        rescue Exception => ex  # store exception into a variable 
+          puts ex.class # then puts it to console
+        end
       end
     end
   end
