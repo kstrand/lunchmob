@@ -50,6 +50,7 @@ namespace :db do
       {:name => "Sauce",                              :street_1 =>  "56  Belden Pl"       },
       {:name => "Cafe Claude",                        :street_1 =>  "7 Claude Ln"         },
       {:name => "Fleur De Sel",                       :street_1 =>  "308 Kearny St"       },
+      {:name => "Good Luck Cafe and Deli",            :street_1 =>  "621 Kearny St"       },
     ])
 
     MeetUpLocation.delete_all
@@ -122,6 +123,10 @@ namespace :db do
 
     r = Restaurant.find_by_name( "Fleur De Sel" )
     r.category = Category.find_by_name( "French"  )
+    r.save!
+
+    r = Restaurant.find_by_name( "Good Luck Cafe and Deli" )
+    r.category = Category.find_by_name( "American"  )
     r.save!
 
    end
