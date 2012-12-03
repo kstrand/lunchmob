@@ -1,10 +1,7 @@
 <div class="mob">
 	<h1>Lunch Mob</h1>
 	<h3><q>No one eats alone...</q></h3>
-
-	<div class="category">
-		<%= image_tag(@icon, :class => "icon") %>
-	</div>
+	<div class="category"><%= image_tag(@icon, :class => "icon") %></div>
 	You'll be eating <b><%= @restaurant.category.name %></b> today!
 	   
 	<h3><%= @mob.restaurant.name %> at <%= @mob.restaurant.street_1 %></h3> 
