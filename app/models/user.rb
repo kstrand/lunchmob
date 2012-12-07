@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   belongs_to :mob
 
+	def capitalize_first_letter
+		self.name.split(' ').map{|w| w.capitalize }.join(' ')
+	end
+
 end
