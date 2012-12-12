@@ -5,10 +5,10 @@ def weekend?
  	today.sunday? || today.saturday? 	
 end
 
-# def week_day?
-# 	today = Time.now
-#  	!today.sunday? && !today.saturday? 	
-# end
+def week_day?
+	today = Time.now
+ 	!today.sunday? && !today.saturday? 	
+end
 
 
 
