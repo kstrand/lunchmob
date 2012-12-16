@@ -27,11 +27,15 @@ class MobsController < ApplicationController
     redirect_to mobs_path
   end
 
-  def show
+  def show     
     @mob = Mob.find(params[:mob_id])
-    @restaurant = Mob.find(params[:mob_id]).restaurant
-    @icon = @restaurant.category.icon_url.gsub( "/images/", "" )
-   #TODO: record in the user object that the user is active because they clicked params[:user_id]
+    if @mob.active?
+      @restaurant = Mob.find(params[:mob_id]).restaurant
+      @icon = @restaurant.category.icon_url.gsub( "/images/", "" )
+    else
+      redirect_to mobs_path
+      #TODO: record in the user object that the user is active because they clicked params[:user_id]
+    end
   end
 
   def destroy

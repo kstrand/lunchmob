@@ -6,7 +6,6 @@ desc "This task is called by the Heroku scheduler add-on"
 
 task :lunchmob_messages => :environment do
   if week_day?
-  #if weekend? 
       Mob.deactivate_all
       empty_mobs = Mob.todays_mob_sizes(User.count)
       users = User.all.shuffle
