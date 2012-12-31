@@ -33,7 +33,7 @@ class MobsController < ApplicationController
       @restaurant = Mob.find(params[:mob_id]).restaurant
       @icon = @restaurant.category.icon_url.gsub( "/images/", "" )
     else
-      redirect_to mobs_path
+      redirect_to notices_path
       #TODO: record in the user object that the user is active because they clicked params[:user_id]
     end
   end
