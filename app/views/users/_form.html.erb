@@ -6,21 +6,28 @@
 <td><%= form_for(@user) do |f| %>
 <table>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div id="error_explanation">
+      <p>There seems to be <%= pluralize(@user.errors.count, "error") %> please try again.</p>
+
+      
+       <% @user.errors.full_messages.each do |msg| %>
+
+    <ul>  
+      <div class=" error">
+      <small><li> <%=   msg  %> </li></small>
+     </div> 
+  </ul>
+
+       <% end %>
+      
     </div>
   <% end %></td>
 
 </tr>
 </table>
 
-  <div class="field">
+  <div class="field" id="standardNiceInput">
     <%= f.label :name %><br/>
     <%= f.text_field :name, :placeholder => "Name"  %>
   </div>
@@ -38,7 +45,8 @@
 
   </div>
   <div class="actions">
-    <%= f.submit %>
+  
+    <%= f.submit "join the mob" %>
   </div>
   </table>
 <% end %>

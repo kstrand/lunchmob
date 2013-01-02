@@ -1,36 +1,114 @@
-<!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
+    <!DOCTYPE html>
+    <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+    <!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+    <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<div id="wrap">
+    <head>
+      <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Syncopate|Julius+Sans+One|Lemon|Slackey' rel='stylesheet' type='text/css'>
 
-  <!-- Uncomment to make IE8 render like IE7 -->
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+      <meta charset="utf-8" />
+      <!-- Uncomment to make IE8 render like IE7 -->
+      <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+      <!-- Set the viewport width to device width for mobile -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title><%= content_for?(:title) ? yield(:title) : "Lunch Mob" %></title>
+      <!-- Included CSS Files -->
+      <%= stylesheet_link_tag    "application" %>
+      <!-- Included JS Files  -->
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
 
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  NAV BAR -->
 
-  <title><%= content_for?(:title) ? yield(:title) : "Lunch Mob" %></title>
+    <div class="container top-bar"> 
+    <div class="row">
+      <div class="twelve columns">
+        <nav class="top-bar">
+          <ul>
+            <!-- Title Area -->
+            <li class="name">
+              <h1>
+                <a href="#">
+                  LunchMob
+                </a>
+              </h1>
+            </li>
+            <li class="toggle-topbar"><a href="#"></a></li>
+          </ul>
 
-  <!-- Included CSS Files -->
-  <%= stylesheet_link_tag    "application" %>
+          <section>
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="divider"></li>
+              <li class="has-dropdown">
+                <a class="active" href="#">About</a>
+                <ul class="dropdown">
+                  <li><label>Section Name</label></li>
+                  <li class="has-dropdown">
+                    <a href="#" class="">Level 1, Has Dropdown</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Level 2</a></li>
+                      <li><a href="#">Level 2</a></li>
+                      <li class="has-dropdown"><a href="#">Level 2, Has Dropdown</a>
+                        <ul class="dropdown">
+                          <li><label>Section</label></li>
+                          <li><a href="#">Level 3</a></li>
+                          <li><a href="#">Level 3</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Level 3</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Level 2</a></li>
+                      <li><a href="#">Level 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Level 1</a></li>
+                  <li><a href="#">Level 1</a></li>
+                  <li class="divider"></li>
+                  <li><label>Section Name</label></li>
+                  <li><a href="#">Level 1</a></li>
+                  <li><a href="#">Level 1</a></li>
+                  <li><a href="#">Level 1</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">See all &rarr;</a></li>
+                </ul>
+              </li>
+              <li class="divider hide-for-small"></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
+    </div>
 
-  <!-- Included JS Files  -->
-  <%= javascript_include_tag "application" %>
+    </head>
+<div id="main">
+    <center>
 
-  <%= csrf_meta_tags %>
+    <body>
+      <%= yield %>
+    </body>
+    </center>
+  </div>
 
-</head>
 
+</div>
+<div id="footer">
 
-<center>
+</div>
 
-<body>
-  <%= yield %>
-</body>
-
-</center>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

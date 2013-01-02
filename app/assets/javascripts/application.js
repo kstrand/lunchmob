@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
+
+
+ $(window).load(function() {
+       $("#featured").orbit({ 
+
+       	timer: false,
+       	directionalNav: true,
+       	afterSlideChange: function(){} });
+
+        
+
+   });

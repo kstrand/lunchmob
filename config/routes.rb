@@ -7,6 +7,7 @@ Lunchmob::Application.routes.draw do
   resources :notices
   resources :mobs
   resources :users
+  resources :home
 
   root to: 'users#new'
 
