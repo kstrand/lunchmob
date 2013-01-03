@@ -9,7 +9,10 @@ Lunchmob::Application.routes.draw do
   resources :users
   resources :home
 
-  root to: 'users#new'
+
+  #root to: 'users#new'
+  
+  root to: 'home#index'
 
 end
 
