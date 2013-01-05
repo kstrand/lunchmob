@@ -16,6 +16,9 @@
 //= require_tree .
 
 
+
+
+
  $(window).load(function() {
        $("#featured").orbit({ 
 
