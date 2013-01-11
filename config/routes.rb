@@ -3,6 +3,8 @@ Lunchmob::Application.routes.draw do
 
   get "static_pages/help"
 
+  get "static_pages/about"
+
   # See how all your routes lay out with "rake routes"
 
   match "/mobs/:mob_id" => "mobs#show"
