@@ -2,32 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
-//@import "compass/reset.scss";
-@import "compass/layout.scss";
- 
-@include sticky-footer(100%, "#layout", "#layout_footer", "#footer");
- 
-#header {
-  background: #999999;
-  height: 72px; }
- 
-#footer {
-  background: #ffcccc; 
-  height: 100%;
-
-  }
- 
-//.example {
-  //height: 100px;
- // border: 3px solid red;
- // p {
-  //  margin: 1em 0.5em;
- // }
-//}
-
 .narrow_width {
 	width: 500px;
 }
+
+

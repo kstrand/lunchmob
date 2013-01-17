@@ -4,7 +4,7 @@
     <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
     <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
     <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-<div id="wrap">
+
     <head>
       <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Syncopate|Julius+Sans+One|Lemon|Slackey' rel='stylesheet' type='text/css'>
 
@@ -31,8 +31,6 @@
             <li class="name">
               <h1>
               <%= link_to 'LunchMob', root_path %>
-               
-                  
                 </a>
               </h1>
             </li>
@@ -43,15 +41,11 @@
             <!-- Left Nav Section -->
             <ul class="left">
               <li class="divider">
-
-             
               </li>
               <li class="has-dropdown">
                <%= link_to 'sign up', new_user_path %>
                       </li>
-   
                     </ul>
-          
                 </ul>
               </li>
               <li class="divider hide-for-small"></li>
@@ -60,27 +54,14 @@
         </nav>
       </div>
     </div>
-    </div>
-
-    </head>
-<div id="main">
-    <center>
+   </div>
+  </head>
 
     <body>
       <%= yield %>
     </body>
-    </center>
-  </div>
-
-
 </div>
-
-<div id="footer">
-
-</div>
-
 </html>
-
 
 
 
