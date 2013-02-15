@@ -18,7 +18,7 @@ Lunchmob::Application.routes.draw do
 
   #root to: 'users#new'
   
-  root to: 'home#index'
+  root to: 'users#new'
 
 end
 
