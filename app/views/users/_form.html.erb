@@ -11,7 +11,6 @@
     <div id="error_explanation">
       <p>There seems to be <%= pluralize(@user.errors.count, "error") %> please try again.</p>
 
-      
        <% @user.errors.full_messages.each do |msg| %>
 
     <ul>  
@@ -19,9 +18,7 @@
       <small><li> <%=   msg  %> </li></small>
      </div> 
   </ul>
-
        <% end %>
-      
     </div>
   <% end %></td>
 
